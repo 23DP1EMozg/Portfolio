@@ -32,8 +32,6 @@ public class AdminController {
 
     @PostMapping("/submitForm")
     public String createRoute(@ModelAttribute Route route){
-        System.out.println(route.getName());
-        System.out.println(route.getPath());
         routeService.addRoute(route);
         return "redirect:/admin";
     }
