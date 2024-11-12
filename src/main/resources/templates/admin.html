@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <h2>Create path</h2>
+    <form th:action="@{/admin/submitForm}" th:object="${route}" method="post">
+        <input placeholder="name" th:field="*{name}"/>
+        <br/>
+        <input placeholder="path" th:field="*{path}"/>
+        <br/>
+        <input type="submit" content="add"/>
+    </form>
+
+    <h2>All routes</h2>
+    <ul th:each="route: ${routes}">
+        <li th:text="${route.name + '   ' + route.path + '   ' + route.id}"></li>
+    </ul>
+
+    <h2>Remove route</h2>
+    <form th:action="@{/admin/removeRoute}" th:object="${removedRoute}" method="post">
+        <input placeholder="id" th:field="*{id}"/>
+        <br/>
+        <input type="submit" content="remove"/>
+    </form>
+</body>
+</html>

@@ -1,3 +1,37 @@
-body{
+*{
+    margin: 0;
     padding: 0;
+    font-family: Helvetica;
+}
+
+section{
+    width: 100%;
+    min-height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav{
+
+}
+
+.picture{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(/picture.png);
+    background-position: center;
+    background-size: cover;
 }

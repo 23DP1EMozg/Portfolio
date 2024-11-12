@@ -4,8 +4,15 @@
   <link rel="stylesheet" href="/header_style.css">
 </head>
 <body>
-  <header th:class="header">
-
+  <header class="header">
+    <div class="left">
+        <ul class="nav_ul">
+          <li><a th:href="@{/}">Home</a></li>
+          <li><a th:href="@{/aboutMe}">About Me</a></li>
+          <li><a th:href="@{/experience}">Experience</a></li>
+          <li><a th:href="@{/skills}">Skills</a></li>
+        </ul>
+    </div>
   </header>
 </body>
 </html>
