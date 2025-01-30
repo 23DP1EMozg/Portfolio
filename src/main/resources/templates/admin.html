@@ -16,7 +16,10 @@
 
     <h2>All routes</h2>
     <ul th:each="route: ${routes}">
-        <li th:text="${route.name + '   ' + route.path + '   ' + route.id}"></li>
+        <li th:text="${'name: ' + route.name}"></li>
+        <li th:text="${'path: ' + route.path}"></li>
+        <li th:text="${'id: ' + route.id}"></li>
+
     </ul>
 
     <h2>Remove route</h2>
@@ -41,7 +44,13 @@
 
     <h2>All skills</h2>
     <ul th:each="skill: ${skills}">
-        <li th:text="${skill.title + '   ' + skill.description + '   ' + skill.period + '    ' + skill.level + '   ' + skill.id}"></li>
+        <li th:text="${'title: ' + skill.title}"></li>
+        <li th:text="${'description: ' + skill.description}"></li>
+        <li th:text="${'period: ' + skill.period}"></li>
+        <li th:text="${'level: ' + skill.level}"></li>
+        <li th:text="${'id: ' + skill.id}"></li>
+
+
     </ul>
 
     <h2>Remove skill</h2>
@@ -54,7 +63,11 @@
 
     <h2>All experiences</h2>
     <ul th:each="exp: ${experiences}">
-        <li th:text="${exp.title + '   ' + exp.description + '   ' + exp.period + '   ' + exp.id}"></li>
+        <li th:text="${'title: ' + exp.title}"></li>
+        <li th:text="${'description: ' + exp.description}"></li>
+        <li th:text="${'period: ' + exp.period}"></li>
+        <li th:text="${'id: ' + exp.id}"></li>
+
     </ul>
 
     <h2>Add experience</h2>

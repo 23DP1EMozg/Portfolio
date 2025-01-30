@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -35,6 +36,7 @@ public class AdminController {
         List<Skill> skills = skillService.getSkills();
         List<Experience> experiences = experienceService.getAllExperiences();
 
+
         model.addAttribute("route", new Route());
         model.addAttribute("removedRoute", new Route());
         model.addAttribute("routes", routes);
@@ -46,6 +48,7 @@ public class AdminController {
         model.addAttribute("experiences", experiences);
         model.addAttribute("exp", new Experience());
         model.addAttribute("removedExp", new Experience());
+
         return "admin";
     }
 
