@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" th:href="@{/css/nav_button_style.css}">
+</head>
+<body>
+    <form th:action="@{${route.path}}" th:method="get"    th:fragment="content (route)">
+    <button style="
+    width: 300px;
+    height: 80px;
+    background-color: #4287f5;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    border: none;
+    cursor: pointer;
+ " type="submit">
+      <span th:text="${route.name}" style="
+text-decoration: none;
+color: white;"></span>
+    </button>
+      </form>
+</body>
+</html>

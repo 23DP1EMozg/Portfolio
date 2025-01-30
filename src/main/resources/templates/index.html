@@ -9,7 +9,7 @@
     <div th:replace="~{fragments/header.html}"/>
 
     <section>
-        <div>
+        <div th:class="introduction">
             <div th:class="intro">
                 <div>
                     <h1>Sveiki, es esmu Edvards!</h1>
@@ -17,11 +17,13 @@
                 </div>
                 <span>Es esmu programmēšanas students Rīgas Valsts Tehnikumā</span>
             </div>
-            <div th:class="nav"></div>
+            <div>
+                <div th:class="picture"></div>
+            </div>
         </div>
-        <div>
-            <div th:class="picture">
-
+        <div  th:class="nav">
+            <div th:each="route : ${routes}">
+                <div th:replace="~{fragments/navButton.html :: content(${route})}"></div>
             </div>
         </div>
     </section>

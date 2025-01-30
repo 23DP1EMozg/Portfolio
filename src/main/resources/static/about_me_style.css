@@ -3,3 +3,20 @@
     padding: 0;
 }
 
+section{
+    width: 100%;
+    margin-top: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div{
+    background-color: #4287f5;
+    width: 80%;
+    height: 300px;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}

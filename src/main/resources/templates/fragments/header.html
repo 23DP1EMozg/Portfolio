@@ -8,7 +8,7 @@
     <div class="left">
         <ul class="nav_ul">
           <li th:each="route: ${routes}">
-            <a th:href="@{${route.path}}" th:text="${route.name}"></a>
+            <a th:href="@{${route.path}}" th:text="${route.name}" ></a>
           </li>
         </ul>
     </div>

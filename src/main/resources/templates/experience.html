@@ -8,5 +8,12 @@
 <body>
 <div th:replace="~{fragments/header.html}"/>
 
+<div th:class="container">
+    <div th:each="exp: ${exp}" th:class="card">
+            <span th:text="${exp.title}" th:class="title"></span> <br/>
+            <span th:text="${exp.description}" th:class="desc"></span> <br/>
+            <span th:text="${exp.period}" th:class="period"></span>
+    </div>
+</div>
 </body>
 </html>

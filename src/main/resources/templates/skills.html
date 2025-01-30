@@ -7,5 +7,16 @@
 </head>
 <body>
     <div th:replace="~{fragments/header.html}"/>
+    <section th:class="section1">
+        <h1>Manas prasmes</h1>
+    </section>
+    <section th:class="section2">
+        <div th:class="card" th:each="skill: ${skills}">
+            <p th:text="${skill.title}" th:class="card_title"></p>
+            <span th:text="${skill.description}" th:class="card_desc"></span>
+            <span th:text="'period: ' + ${skill.period}" th:class="card_period"></span>
+            <span th:text="'level: ' + ${skill.level}" th:class="card_level"></span>
+        </div>
+    </section>
 </body>
 </html>

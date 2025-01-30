@@ -6,15 +6,20 @@
 
 section{
     width: 100%;
-    min-height: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+.introduction{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
+    width: 100%;
+    min-height: 100px;
 }
 
 .intro{
@@ -24,7 +29,9 @@ section{
 }
 
 .nav{
-
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .picture{

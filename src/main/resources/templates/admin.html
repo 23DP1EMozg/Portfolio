@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Create path</h2>
-    <form th:action="@{/admin/submitForm}" th:object="${route}" method="post">
+    <form th:action="@{/admin/createRoute}" th:object="${route}" method="post">
         <input placeholder="name" th:field="*{name}"/>
         <br/>
         <input placeholder="path" th:field="*{path}"/>
@@ -25,5 +25,56 @@
         <br/>
         <input type="submit" content="remove"/>
     </form>
+
+    <h2>Add skill</h2>
+    <form th:action="@{/admin/createSkill}" th:method="post" th:object="${skill}">
+        <input placeholder="title" th:field="*{title}"/>
+        <br/>
+        <input placeholder="description" th:field="*{description}"/>
+        <br/>
+        <input placeholder="period" th:field="*{period}"/>
+        <br/>
+        <input placeholder="level" th:field="*{level}"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+
+    <h2>All skills</h2>
+    <ul th:each="skill: ${skills}">
+        <li th:text="${skill.title + '   ' + skill.description + '   ' + skill.period + '    ' + skill.level + '   ' + skill.id}"></li>
+    </ul>
+
+    <h2>Remove skill</h2>
+    <form th:action="@{/admin/removeSkill}" th:object="${removedSkill}" method="post">
+        <input placeholder="id" th:field="*{id}"/>
+        <br/>
+        <input type="submit" content="remove"/>
+    </form>
+
+
+    <h2>All experiences</h2>
+    <ul th:each="exp: ${experiences}">
+        <li th:text="${exp.title + '   ' + exp.description + '   ' + exp.period + '   ' + exp.id}"></li>
+    </ul>
+
+    <h2>Add experience</h2>
+    <form th:action="@{/admin/addExperience}" th:method="post" th:object="${exp}">
+        <input placeholder="title" th:field="*{title}"/>
+        <br/>
+        <input placeholder="description" th:field="*{description}"/>
+        <br/>
+        <input placeholder="period" th:field="*{period}"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+
+
+    <h2>Remove experience</h2>
+    <form th:action="@{/admin/removeExperience}" th:object="${removedExp}" method="post">
+        <input placeholder="id" th:field="*{id}"/>
+        <br/>
+        <input type="submit" content="remove"/>
+    </form>
+
 </body>
 </html>

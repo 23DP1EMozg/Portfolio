@@ -1,0 +1,15 @@
+
+.main{
+    width: 300px;
+    height: 80px;
+    background-color: blue;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+
+/*.intro_nav_container{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 80px;*/
+/*}*/
